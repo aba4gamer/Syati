@@ -13,6 +13,7 @@
 #include "Game/MapObj/Coin.h"
 #include "Game/MapObj/CoinHolder.h"
 #include "Game/MapObj/CoinRotater.h"
+#include "Game/MapObj/DashRing.h"
 #include "Game/MapObj/DummyDisplayModel.h"
 #include "Game/MapObj/EarthenPipe.h"
 #include "Game/MapObj/EarthenPipeMediator.h"

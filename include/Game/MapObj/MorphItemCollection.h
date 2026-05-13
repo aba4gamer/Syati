@@ -11,10 +11,14 @@ public:
 	virtual void init(const JMapInfoIter &);
 	virtual void calcAndSetBaseMtx();
 
-	void exeWait();
 	void initPowerUpModel(const JMapInfoIter &);
+	void exeWait();
 
 	s32 mPowerUpType; // _90
 	f32 mRotation; // _94
 	bool mIsDrill; // _98
 };
+
+namespace NrvMorphItemCollection {
+	NERVE(MorphItemCollectionNrvWait);
+}
