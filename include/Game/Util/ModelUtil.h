@@ -4,6 +4,7 @@
 
 class LiveActor;
 class J3DModel;
+class J3DModelData;
 class XanimeResourceTable;
 class ResourceHolder;
 
@@ -18,6 +19,9 @@ namespace MR {
     void showMaterial(J3DModel *, const char *);
     void showMaterial(const LiveActor *, const char *);
     void updateModelDiffDL(LiveActor *);
+
+    bool isExistEffectTexMtx(LiveActor*);
+    bool isExistEffectTexMtx(J3DModelData*);
 
     XanimeResourceTable* newXanimeResourceTable(ResourceHolder*);
 };
