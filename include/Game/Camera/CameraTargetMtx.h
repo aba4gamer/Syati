@@ -29,7 +29,7 @@ public:
     void setMtx(MtxPtr mtx);
     #endif
 
-    TMtx34f mMatrix;                // _10
+    TPos3f mMatrix;                // _10
     TVec3f mPosition;               // _40
     TVec3f mLastMove;               // _4C
     TVec3f mGravityVector;          // _58
