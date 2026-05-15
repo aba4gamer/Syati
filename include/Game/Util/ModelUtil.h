@@ -23,5 +23,7 @@ namespace MR {
     bool isExistEffectTexMtx(LiveActor*);
     bool isExistEffectTexMtx(J3DModelData*);
 
+    void calcModelBoundingRadius(f32* pResult, const LiveActor*);
+
     XanimeResourceTable* newXanimeResourceTable(ResourceHolder*);
 };
