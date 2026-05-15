@@ -41,9 +41,9 @@ public:
 
 	LayoutManager* getLayoutManager() const;
 
-	void initLayoutManager(const char *, u32);
-	void initLayoutManagerNoConvertFilename(const char *, u32);
-	void initLayoutManager(const char *, u32, u32);
+	void initLayoutManager(const char* pName, u32);
+	void initLayoutManagerNoConvertFilename(const char* pName, u32);
+	void initLayoutManagerWithTextBoxBufferLength(const char* pName, u32, u32 bufferLength);
 	void initNerve(const Nerve *);
 	void initEffectKeeper(int, const char *, const EffectSystem *);
 	void initPointingTarget(int);
