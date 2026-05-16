@@ -28,11 +28,11 @@ public:
     void showLowModel();
     void hideAllModel();
     void setViewCtrlPtr(const bool *, const bool *, const bool *, const bool *);
-    void createLodModel(s32, s32, s32);
+    void createLodModel(int, int, int);
     void syncMaterialAnimation();
     void syncJointAnimation();
     void initLightCtrl();
-    ModelObj* initLodModel(s32, s32, s32, bool) const;
+    ModelObj* initLodModel(int, int, int, bool) const;
 
     f32 mDistToMiddle;           // _0
     f32 mDistToLow;              // _4
