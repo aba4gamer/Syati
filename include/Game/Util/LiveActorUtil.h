@@ -341,7 +341,4 @@ namespace MR {
 
     HitSensor* getBodySensor(LiveActor *pActor);
     void setBodySensorType(LiveActor *pActor, u32 sensorType);
-
-
-    void calcModelBoundingBox(TBox3f* pDest, const LiveActor* pActor);
 };
