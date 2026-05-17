@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Game/MapObj/AssemblyBlock.h"
 #include "Game/MapObj/BenefitItemObj.h"
 #include "Game/MapObj/BenefitItemLifeUp.h"
 #include "Game/MapObj/BlackHole.h"

@@ -57,6 +57,10 @@ namespace MR {
 
     void updateModelDiffDL(LiveActor*);
 
+    void copyJointAnimation(LiveActor*, const LiveActor*);
+    void syncJointAnimation(LiveActor*, const LiveActor*);
+    void syncMaterialAnimation(LiveActor*, const LiveActor*);
+
     s32 getLightNumMax(const LiveActor* pActor);
     s32 getLightNumMax(J3DModelData*);
     void downFracVtx(J3DModelData*);
