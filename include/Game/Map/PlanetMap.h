@@ -7,7 +7,7 @@ class ModelObj;
 
 class PlanetMap : public LiveActor {
 public:
-    PlanetMap(const char*);
+    PlanetMap(const char*, const char*);
 
     virtual ~PlanetMap();
     virtual void init(const JMapInfoIter& rIter);
