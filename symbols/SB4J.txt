@@ -2836,6 +2836,7 @@ scatterStarPiecePlayer__2MRFUl=0x8004FEB0
 isPlayerSwingAction__2MRFv=0x8004FED0
 isPlayerPointedBy2POnTriggerButton__2MRFv=0x8004FF00
 isPlayerSquat__2MRFv=0x8004FF30
+isPlayerInBind__2MRFv=0x8004FF40
 isPlayerInRush__2MRFv=0x8004FF40
 isPlayerRecovering__2MRFv=0x8004FF50
 isPlayerNeedBrakingCamera__2MRFv=0x8004FF60

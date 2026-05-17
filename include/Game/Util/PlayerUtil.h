@@ -18,6 +18,7 @@ namespace MR {
 	void forceKillPlayerByWaterOrGroundRace();
 	void forceKillPlayerByGroundRace();
 
+	bool isPlayerInBind();
 	bool isPlayerDead();
 	bool isPlayerRefuseTalk();
 	bool isPlayerTeresaDisappear();
