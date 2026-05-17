@@ -182,7 +182,7 @@ namespace MR {
     f32 calcHitPowerToWall(const LiveActor *pActor);
 
     u32 getBindedPlaneNum(const LiveActor *pActor);
-    const TVec3f& getBindedPlaneNormal(const LiveActor *pActor);
+    const TVec3f* getBindedPlaneNormal(const LiveActor* pActor, int);
     HitSensor* getBindedPlaneSensor(const LiveActor *pActor, int);
     const TVec3f& getBindedFixReactionVector(const LiveActor *pActor);
     void setBinderOffsetVec(LiveActor *pActor, const TVec3f *pOffset, bool);
