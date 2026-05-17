@@ -8,6 +8,7 @@ class LiveActor;
 class NameObj;
 class Nerve;
 class TalkMessageCtrl;
+class NerveExecutor;
 
 namespace MR {
 	bool tryRegisterDemoCast(LiveActor *, const JMapInfoIter &);
@@ -47,6 +48,7 @@ namespace MR {
 	bool requestStartDemoWithoutCinemaFrame(LiveActor *, const char *, const Nerve *, const Nerve *);
 	bool requestStartDemoWithoutCinemaFrame(LayoutActor *, const char *, const Nerve *, const Nerve *);
 	bool requestStartDemoMarioPuppetable(LiveActor *, const char *, const Nerve *, const Nerve *);
+	bool requestStartDemoMarioPuppetable(NerveExecutor *, LiveActor*, const char *, const Nerve *, const Nerve *);
 
 	bool requestStartTimeKeepDemo(NameObj *, const char *, const char *);
 	bool requestStartTimeKeepDemoMarioPuppetable(NameObj *, const char *, const char *);
