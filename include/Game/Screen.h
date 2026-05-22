@@ -10,6 +10,8 @@
 #include "Game/Screen/InformationMessage.h"
 #include "Game/Screen/InformationObserver.h"
 #include "Game/Screen/LayoutActor.h"
+#include "Game/Screen/LayoutManager.h"
+#include "Game/Screen/LayoutPaneCtrl.h"
 #include "Game/Screen/NoteCounter.h"
 #include "Game/Screen/StageResultInformer.h"
 #include "Game/Screen/StarPointerTarget.h"
