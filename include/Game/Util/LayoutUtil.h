@@ -7,9 +7,81 @@ class IconAButton;
 class ResourceHolder;
 class LayoutGroupCtrl;
 class LayoutPaneCtrl;
-struct TextBoxRecursiveOperation;
 class SimpleLayout;
 class Nerve;
+
+namespace nw4r {
+	namespace lyt {
+		class TextBox;
+	}
+	namespace ut {
+		class Font;
+	}
+}
+
+class TextBoxRecursiveOperation {
+public:
+	virtual void execute(nw4r::lyt::TextBox* pTextBox) const = 0;
+};
+
+class TextBoxRecursiveSetMessage : public TextBoxRecursiveOperation {
+public:
+	/// @brief Creates a new `TextBoxRecursiveSetMessage`.
+	inline TextBoxRecursiveSetMessage(const wchar_t* pMessage) : mMessage(pMessage) {}
+
+	virtual void execute(nw4r::lyt::TextBox* pTextBox) const;
+
+private:
+	const wchar_t* mMessage; // 0x04
+};
+
+class TextBoxRecursiveSetArgNumber : public TextBoxRecursiveOperation {
+public:
+	/// @brief Creates a new `TextBoxRecursiveSetArgNumber`.
+	inline TextBoxRecursiveSetArgNumber(s32 arg, s32 param2) : mArg(arg), _8(param2) {}
+
+	virtual void execute(nw4r::lyt::TextBox* pTextBox) const;
+
+private:
+	s32 mArg; // 0x04
+	s32 _8; // 0x08
+};
+
+class TextBoxRecursiveSetArgString : public TextBoxRecursiveOperation {
+public:
+	/// @brief Creates a new `TextBoxRecursiveSetArgString`.
+	inline TextBoxRecursiveSetArgString(const wchar_t* pArg, s32 param2) : mArg(pArg), _8(param2) {}
+
+	virtual void execute(nw4r::lyt::TextBox* pTextBox) const;
+
+private:
+	const wchar_t* mArg; // 0x04
+	s32 _8; // 0x08
+};
+
+class TextBoxRecursiveSetVerticalPosition : public TextBoxRecursiveOperation {
+public:
+	/// @brief Creates a new `TextBoxRecursiveSetVerticalPosition`.
+	inline TextBoxRecursiveSetVerticalPosition(u8 position) : mPosition(position) {}
+
+	virtual void execute(nw4r::lyt::TextBox* pTextBox) const;
+
+private:
+	u8 mPosition; // 0x04
+};
+
+// TextBoxRecursiveSetHorizontalPosition Removed in SMG2
+
+class TextBoxRecursiveSetFont : public TextBoxRecursiveOperation {
+public:
+	/// @brief Creates a new `TextBoxRecursiveSetFont`.
+	TextBoxRecursiveSetFont(nw4r::ut::Font* pFont);
+
+	virtual void execute(nw4r::lyt::TextBox* pTextBox) const;
+
+private:
+	nw4r::ut::Font* mFont; // 0x04
+};
 
 namespace MR {
 	ResourceHolder* createAndAddLayoutHolder(const char*);
