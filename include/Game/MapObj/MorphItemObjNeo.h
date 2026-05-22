@@ -3,6 +3,8 @@
 #include "revolution.h"
 #include "Game/LiveActor/LiveActor.h"
 
+class ModelObj;
+
 #define MORPH_HOPPER 1
 #define MORPH_BEE 2
 #define MORPH_TERESA 3
