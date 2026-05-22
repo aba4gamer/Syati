@@ -4,6 +4,7 @@
 
 class StarPointerController;
 class StarPointerLayout;
+class StarPointerGuidance;
 
 class StarPointerPeekZ {
 public:
@@ -49,20 +50,18 @@ public:
     StarPointerController* getStarPointerController(s32) const;
     void update();
 
-    u8 _0;
-    u8 _1;
-    u8 _2;
-    u8 _3;
+    bool mIsUpdateTransHolder;
+    bool mIsAllowP1StarPieceShot;
+    bool mIsAllowP2StarPieceShot;
+    bool mIsOSPointerMode;
     StarPointerController* mControllers;        // 0x4
     StarPointerLayout* mStarPointerLayouts;     // 0x8
     StarPointerTransformHolder* mTransHolder;   // 0xC
     StarPointerPeekZ* mPeekZ;                   // 0x10
-    u32* _14;
-    u32 _18;
-    u32 _1C;
-    u32 _20;
-    u32 _24;
-    u32 _28;
+    StarPointerGuidance* mGuidance;             // 0x14
+    void* _18;                                  // 0x18 : NEW to SMG2, Pointer to something
+    s32 _1C;                                    // 0x1C
+    TVec3f mNozzleAimPos;                       // 0x20
 };
 
 namespace StarPointerFunction {

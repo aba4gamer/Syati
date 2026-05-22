@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Game/System/NerveExecutor.h"
+#include "Game/Util/Array.h"
 
 enum StarPointerModeEnum {
     StarPointerMode_HomeButton = 0,
@@ -37,6 +38,12 @@ enum StarPointerModeEnum {
 
 class StarPointerOnOffController : public NerveExecutor {
 public:
+	struct RequestInfo {
+	public:
+		/* 0x00 */ void* mRequester;
+		/* 0x04 */ s32 mMode;
+	};
+
 	StarPointerOnOffController();
 
 	virtual ~StarPointerOnOffController();
@@ -81,9 +88,9 @@ public:
 	void decModeCounter(void* pHost);
 
 
-	bool _8;
-	void* _C[16];
-	u32 _4C[StarPointerMode_Count];
-	bool _B0[StarPointerMode_Count];
-	s32 _CC;
+	bool _8; // 0x08
+	MR::FixedArray< RequestInfo*, 16 > mRequests; // 0x0C
+	s32 mModeCounter[StarPointerMode_Count]; // 0x4C
+	bool mRequested[StarPointerMode_Count]; // 0xB0
+	s32 mMode; // 0xCC
 };
