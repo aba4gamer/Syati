@@ -21,6 +21,9 @@ namespace nw4r {
 
 class TextBoxRecursiveOperation {
 public:
+	/// @brief Destroys the `TextBoxRecursiveOperation`.
+	virtual ~TextBoxRecursiveOperation() {};
+
 	virtual void execute(nw4r::lyt::TextBox* pTextBox) const = 0;
 };
 
