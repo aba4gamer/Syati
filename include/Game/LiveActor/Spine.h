@@ -11,7 +11,7 @@ public:
     virtual void executeOnEnd(Spine *) const;
 };
 
-/* DEPRECATED: For new projects, use FULL_NERVE instead */
+/* Prefer using FULL_NERVE when possible */
 #define NERVE(name)\
 class name : public Nerve {\
     public:\
@@ -19,7 +19,7 @@ class name : public Nerve {\
     static name sInstance;\
 };\
 
-/* DEPRECATED: For new projects, use FULL_NERVE_ONEND instead */
+/* Prefer using FULL_NERVE_ONEND when possible */
 #define ENDABLE_NERVE(name)\
 class name : public Nerve {\
 public:\
@@ -27,6 +27,24 @@ public:\
     virtual void executeOnEnd(Spine *) const;\
     static name sInstance;\
 };\
+
+#define NERVE_EXE(name, parent_class, executor_name)\
+void name::execute(Spine* pSpine) const {\
+    parent_class* actor = reinterpret_cast<parent_class*>(pSpine->mExecutor);\
+    actor->exe##executor_name();\
+}\
+name(name::sInstance);\
+
+#define ENDABLE_NERVE_EXE(name, parent_class, executor_name, executorOnEnd_name)\
+void name::execute(Spine* pSpine) const {\
+    parent_class* actor = reinterpret_cast<parent_class*>(pSpine->mExecutor);\
+    actor->exe##executor_name();\
+}\
+void name::executeOnEnd(Spine* pSpine) const {\
+    parent_class* actor = reinterpret_cast<parent_class*>(pSpine->mExecutor);\
+    actor->exeOnEnd##executorOnEnd_name();\
+}\
+name(name::sInstance);\
 
 /* DEPRECATED: For new projects, use FULL_NERVE instead */
 /* Declares a nerve and also defines the body of the nerve's execution function, which calls a specified member function */
