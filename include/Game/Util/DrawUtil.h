@@ -28,4 +28,6 @@ namespace MR {
     void clearZBuffer();
 
     void setDefaultViewportAndScissor();
+
+    void loadProjectionMtxFor2D();
 };
