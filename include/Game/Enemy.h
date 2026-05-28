@@ -14,7 +14,7 @@
 #include "Game/Enemy/Kameck.h"
 #include "Game/Enemy/KameckTurtle.h"
 #include "Game/Enemy/Kanina.h"
-#include "Game/Enemy/Meremera.h"
+#include "Game/Enemy/Meramera.h"
 #include "Game/Enemy/RingBeam.h"
 #include "Game/Enemy/SamboHead.h"
 #include "Game/Enemy/SpinHitController.h"
