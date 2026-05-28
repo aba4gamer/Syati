@@ -11163,6 +11163,7 @@ tryRecovery__8MerameraFv=0x801C77A0
 tryPointBind__8MerameraFv=0x801C7850
 exeWait__8MerameraFv=0x801C79B0
 exeWalk__8MerameraFv=0x801C7A60
+exeChaseStart__8MerameraFv=0x801C7B20
 isEnableAttack__8MerameraCFv=0x801C8BD0
 isPushMoved__8MerameraCFv=0x801C8C70
 isEnableFireball__8MerameraCFv=0x801C8D20
