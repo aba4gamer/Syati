@@ -43,4 +43,13 @@ public:
     HitInfo _15C;
     f32 _1E8;
     u8 _1EC;
+
+    struct {
+        bool _0 : 1;
+        bool _1 : 1;
+        bool _2 : 1;
+        bool _3 : 1;
+        bool _4 : 1;
+        bool _5 : 1;
+    } _1EC;
 };

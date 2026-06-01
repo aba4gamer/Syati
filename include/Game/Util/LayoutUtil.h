@@ -126,6 +126,10 @@ namespace MR {
 
 	// various more functions here...
 
+	void setPaneRotate(const LayoutActor* pLayout, f32, f32, f32, const char* pPaneName);
+	 
+	// various more functions here...
+
 	void startAnim(LayoutActor* pLayout, const char* pAnimName, u32);
 	void startAnimAtFirstStep(LayoutActor*, const char* pAnimName, u32);
 	void startPaneAnim(LayoutActor* pLayout, const char* pPaneName, const char* pAnimName, u32 animTrackId);

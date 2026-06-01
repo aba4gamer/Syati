@@ -2,6 +2,7 @@
 
 #include "Game/AudioLib/AudAnmSoundObject.h"
 #include "Game/AudioLib/AudSceneMgr.h"
+#include "Game/AudioLib/AudSoundNameConverter.h"
 #include "Game/AudioLib/AudSoundObject.h"
 #include "Game/AudioLib/AudWrap.h"
 #include "Game/AudioLib/JAUSoundObject.h"

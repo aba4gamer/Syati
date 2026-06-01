@@ -20,6 +20,10 @@ public:
     virtual void attackSensor(HitSensor *pSender, HitSensor *pReceiver);
     virtual bool receiveOtherMsg(u32 msg, HitSensor *pSender, HitSensor *pReceiver);
 
+    void launch(const TVec3f&, f32, f32, bool, bool, bool);
+    void launch(const TVec3f&, const TVec3f&, f32, f32, bool, bool, bool);
+    void launch(const TVec3f&, const TVec3f&, bool, bool, bool);
+
     TVec3f _90;
     f32 _9C;
     f32 _A0;

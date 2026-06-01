@@ -45,10 +45,18 @@ class StarPointerDirector {
 public:
     StarPointerDirector();
 
-    void createLayout();
-    void draw();
-    StarPointerController* getStarPointerController(s32) const;
     void update();
+    void draw();
+    void createLayout();
+
+    void startHandPointer();
+    void startFingerPointer();
+    void startStarPointer();
+    void startStarPointerNozzle();
+    // two unknown functions. Related to yoshi pointer most likely...
+    void setGameSceneCameraMtx();
+    StarPointerController* getStarPointerController(s32) const;
+    StarPointerLayout* getStarPointerLayout(s32) const;
 
     bool mIsUpdateTransHolder;
     bool mIsAllowP1StarPieceShot;
@@ -68,4 +76,5 @@ namespace StarPointerFunction {
     StarPointerDirector* getStarPointerDirector();
     s32 getNumStarPointer();
     bool canShoot(s32);
+    void forceInsideScreenEdge(TVec2f*);
 }

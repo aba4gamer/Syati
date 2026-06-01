@@ -19,9 +19,9 @@ public:
 	void copyTrans(TVec3f *) const;
 	void copyRotate(TVec3f *) const;
 
-	MtxPtr mBaseMtx; // _0
-	TVec3f mLocalTrans; // _4
-	TVec3f _10;
-	TMtx34f _1C;
-	bool mNormalizeScale; // _4C
+	MtxPtr mBaseMtx; // 0x00
+	TVec3f mLocalTrans; // 0x04
+	TVec3f mRotDegrees; // 0x10
+	TPos3f mMtx; // 0x1C
+	bool mNormalizeScale; // 0x4C
 };

@@ -4,7 +4,7 @@
 #include "Game/GameAudio/AudTalkSoundData.h"
 
 class LiveActor;
-
+class AudSoundObject;
 
 namespace MR {
 	bool isDestroySceneKeepAllSound();

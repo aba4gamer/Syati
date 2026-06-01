@@ -77,7 +77,7 @@ name name::sInstance;\
 class name : public Nerve\
 {\
 public:\
-    name() NO_INLINE {\
+    name() {\
     };\
     virtual void execute(Spine *pSpine) const {\
         parent_class* actor = reinterpret_cast<parent_class*>(pSpine->mExecutor);\
