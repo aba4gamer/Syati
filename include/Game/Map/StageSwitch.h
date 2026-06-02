@@ -74,5 +74,8 @@ public:
 };
 
 namespace MR {
-    StageSwitchCtrl* createStageSwitchCtrl(NameObj *pObject, const JMapInfoIter &rIter);
+    /// Creates an instance of StageSwitchCtrl
+    /// @param useless The value passed is not read.
+    /// @param rIter The JMapInfoIter to create the StageSwitchCtrl with
+    StageSwitchCtrl* createStageSwitchCtrl(NameObj* useless, const JMapInfoIter &rIter);
 };
