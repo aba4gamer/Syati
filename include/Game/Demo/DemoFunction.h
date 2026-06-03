@@ -8,4 +8,5 @@ class TalkMessageCtrl;
 
 namespace DemoFunction {
     void registerDemoTalkMessageCtrl(LiveActor*, TalkMessageCtrl*);
+    DemoExecutor* findDemoExecutor(const LiveActor*);
 };
