@@ -55,7 +55,7 @@ class NameObj;
 #define SCENE_OBJ_TIME_STOP_SCREEN_CAPTURE_TEXTURE 48 
 #define SCENE_OBJ_TIME_STOP_SCREEN_CAPTURE_EFFECT 49 
 #define SCENE_OBJ_SWING_ACTION_WATCHER 50 
-#define SCENE_OBJ_51 51 // ワールドマップ
+#define SCENE_OBJ_WORLD_MAP 51 // ワールドマップ
 #define SCENE_OBJ_52 52 // ワールドマップ（リザルト指揮）
 #define SCENE_OBJ_53 53 // スコアアタックアクセサ
 #define SCENE_OBJ_SCORE_RESULT_KEEPER 54 

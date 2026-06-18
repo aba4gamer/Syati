@@ -134,6 +134,8 @@ namespace MR {
 	void changePlayerModeInvincible();
 	void changePlayerItemLifeUp();
 	void curePlayerElementMode();
+	void startDashYoshiMode();
+	void startBalloonYoshiMode();
 
 	bool isPlayerParalyzing();
 	bool isPlayerDamaging();

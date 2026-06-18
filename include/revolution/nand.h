@@ -1,7 +1,7 @@
 #ifndef __REVOLUTION_NAND_H
 #define __REVOLUTION_NAND_H
 
-#include "revolution\types.h"
+#include "revolution/types.h"
 
 #ifdef __cplusplus
 extern "C" {

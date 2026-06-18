@@ -3,17 +3,17 @@
 #include "revolution.h"
 #include "Game/Player/MarioModule.h"
 #include "Game/Player/MarioSwim.h"
+#include "Game/Player/MarioHang.h"
+#include "Game/Player/MarioWall.h"
 
 class MarioActor;
 class MarioState;
 class FloorCode;
 // Undocumented
 class MarioFlow;
-class MarioWall;
 class MarioDamage;
 class MarioFaint;
 class MarioBlown;
-class MarioHang;
 class MarioSlider;
 class MarioFireDamage;
 class MarioFireRun;
@@ -64,6 +64,7 @@ public:
     
     void tryJump();
     void trySquatJump();
+    void trySpinJump(u8);
     void resetSleepTimer();
 
     void updateCubeCode();
@@ -89,6 +90,7 @@ public:
     bool isEnableAddDamage() const;
     bool doFlipRot(const TVec3f &);
     bool isDamaging() const;
+    bool doRecovery();
 
     u8 _8;
     u8 _9;
@@ -434,19 +436,19 @@ public:
     MarioWait *mMarioWait;
     MarioClimb *mMarioClimb;
     TVec3f _788;
-    MarioHang *mMarioHang;
-    MarioRecovery *mMarioRecovery;
-    MarioWarp *mMarioWarp;
-    MarioFlip *mMarioFlip;
-    MarioSideStep *mMarioSideStep;
-    MarioFrontStep *mMarioFrontStep;
-    MarioSkate *mMarioSkate;
-    MarioTalk *mMarioTalk;
-    MarioYoshiPull *mMarioYoshiPull;
-    MarioYoshiBalloon *mMarioYoshiBalloon;
-    MarioYoshiShot *mMarioYoshiShot;
-    MarioYoshiDash *mMarioYoshiDash;
-    MarioDamage *mMarioDamage;
+    MarioHang *mMarioHang;                  // _794
+    MarioRecovery *mMarioRecovery;          // _798
+    MarioWarp *mMarioWarp;                  // _79C
+    MarioFlip *mMarioFlip;                  // _7A0
+    MarioSideStep *mMarioSideStep;          // _7A4
+    MarioFrontStep *mMarioFrontStep;        // _7A8
+    MarioSkate *mMarioSkate;                // _7AC
+    MarioTalk *mMarioTalk;                  // _7B0
+    MarioYoshiPull *mMarioYoshiPull;        // _7B4
+    MarioYoshiBalloon *mMarioYoshiBalloon;  // _7B8
+    MarioYoshiShot *mMarioYoshiShot;        // _7BC
+    MarioYoshiDash *mMarioYoshiDash;        // _7C0
+    MarioDamage *mMarioDamage;              // _7C4
     TVec3f _7C8;
     u32 _7D4;
     TVec3f _7D8;

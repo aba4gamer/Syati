@@ -49,6 +49,7 @@
 #include "Game/MapObj/SuperSpinDriver.h"
 #include "Game/MapObj/WaterPressureBullet.h"
 #include "Game/MapObj/WaterPressureBulletHolder.h"
+#include "Game/MapObj/WorldMap.h"
 #include "Game/MapObj/YellowChip.h"
 #include "Game/MapObj/MapParts/FloaterFloatingForce.h"
 #include "Game/MapObj/MapParts/FloaterFloatingForceTypeNormal.h"

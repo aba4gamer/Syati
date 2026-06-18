@@ -2,6 +2,7 @@
 
 #include "revolution.h"
 #include "Game/LiveActor/LiveActor.h"
+#include "Game/LiveActor/ModelObj.h"
 #include "Game/MapObj/SpinDriverPathDrawer.h"
 
 #define SUPER_SPIN_DRIVER_YELLOW 0
@@ -13,12 +14,13 @@ public:
 	SuperSpinDriver(const char *, s32);
 
 	void initColor();
+	void onUse();
 
 	s32 _90;
 	s32 _94;
 	s32 _98;
 	SpinDriverPathDrawer* mSpinDriverPathDrawer; // _9C
-	s32 _A0;
+	ModelObj *mEmptyModel;						 // _A0
 	s32 _A4;
 	Mtx _A8;
 	TQuat4f _D8;
@@ -62,4 +64,18 @@ namespace MR {
 	NameObj* createSuperSpinDriverYellow(const char*);
 	//NameObj* createSuperSpinDriverGreen(const char*); // Not present in SMG2
 	NameObj* createSuperSpinDriverPink(const char*);
+};
+
+namespace NrvSuperSpinDriver {
+	NERVE(SuperSpinDriverNrvTryDemo);
+	NERVE(SuperSpinDriverNrvEmptyNonActive);
+	NERVE(SuperSpinDriverNrvEmptyAppear);
+	NERVE(SuperSpinDriverNrvEmptyWait);
+	NERVE(SuperSpinDriverNrvNonActive);
+	NERVE(SuperSpinDriverNrvAppear);
+	NERVE(SuperSpinDriverNrvWait);
+	NERVE(SuperSpinDriverNrvCapture);
+	NERVE(SuperSpinDriverNrvShootStart);
+	NERVE(SuperSpinDriverNrvShoot);
+	NERVE(SuperSpinDriverNrvCoolDown);
 };
