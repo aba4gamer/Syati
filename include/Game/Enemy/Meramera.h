@@ -47,6 +47,8 @@ public:
     bool tryRecovery();
     bool tryPointBind();
 
+    void resetAppear();
+
     void exeWait();
     void exeWalk();
     // TODO: More nerve executors
