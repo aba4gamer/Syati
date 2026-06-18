@@ -37,8 +37,12 @@ public:
     u32* _2C;
     TVec3f _30;
     HitInfo _3C;
+    f32 _C8;
     HitInfo _CC;
+    f32 _158;
     HitInfo _15C;
+    f32 _1E8;
+    u8 _1EC;
 
     struct {
         bool _0 : 1;
