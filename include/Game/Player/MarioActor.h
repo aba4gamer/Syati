@@ -99,6 +99,8 @@ public:
 	void incLife(u32);
 	void decLife(u16);
 	void changeMaxLife(s32);
+	void setPunchHitTimer(u8);
+	void tryReleaseBombTeresa();
 
 	void initFireMario();
 	void initBeeMario();
