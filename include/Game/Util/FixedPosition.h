@@ -7,7 +7,7 @@ class LiveActor;
 
 class FixedPosition {
 public:
-	FixedPosition(const LiveActor *, const char *, const TVec3f &, const TVec3f &);
+	FixedPosition(const LiveActor * pActor, const char * pJointName, const TVec3f & rJointPositionOffset, const TVec3f & rJointRotationOffset);
 	FixedPosition(const LiveActor *, const TVec3f &, const TVec3f &);
 	FixedPosition(MtxPtr, const char *, const TVec3f &, const TVec3f &);
 	FixedPosition(const LiveActor *, const char *, const LiveActor *);
