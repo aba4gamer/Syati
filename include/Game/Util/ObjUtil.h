@@ -130,6 +130,8 @@ namespace MR {
     const JMapInfo* tryCreateStageZoneInfoCsvParser(const char *pPathFormat, ...);
     const JMapInfo* tryCreateStageUseResourceCsvParser(const char *pStageName, const char *pPathFormat, ...);
 
+    const JMapInfo* tryCreateWorldMapCsvParser(u32* pWorldId, const char *pCsvName); // first argument isn't actually a u32 pointer (it's most likely a pointer to something world map related), but treating it as one is totally valid 
+
     s32 getCsvDataElementNum(const JMapInfo *pCsvData);
     void getCsvDataStr(const char **pDest, const JMapInfo *pCsvData, const char *pItemName, s32 dataRow);
     void getCsvDataStrOrNULL(const char **pDest, const JMapInfo *pCsvData, const char *pItemName, s32 dataRow);
