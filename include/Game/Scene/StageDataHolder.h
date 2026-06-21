@@ -25,7 +25,7 @@ public:
     s32 getGeneralPosNum() const;
     JMapInfo *getGeneralPosInfoFromDataIndex(int) const;
     s32 getChildObjNum(const JMapInfoIter &) const;
-    JMapInfo *getChildObjInfoFromDataIndex(const JMapInfoIter &, int) const;
+    JMapInfoIter getChildObjInfoFromDataIndex(const JMapInfoIter &, int) const;
     const StageDataHolder *findPlacedStageDataHolder(const JMapInfoIter &) const;
     const StageDataHolder *getStageDataHolderFromZoneId(int) const;
     const StageDataHolder *getStageDataHolderFromZoneId(int);
