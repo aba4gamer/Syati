@@ -3,7 +3,7 @@
 #include "revolution/types.h"
 
 class LiveActor;
-class WorldMapPartsHolder;
+class WorldMapObjHolder;
 
 class PointPartInfo {
 public:
@@ -20,12 +20,12 @@ public:
 
 class PointPartsHolder {
 public:
-    PointPartsHolder(WorldMapPartsHolder* pHolder);
+    PointPartsHolder(WorldMapObjHolder* pHolder);
 
     void init();
 
-    /* 0x00 */ WorldMapPartsHolder* mHolder;
-    /* 0x04 */ PointPartInfo* mPointPartInfoArr;
+    /* 0x00 */ WorldMapObjHolder* mHolder;
+    /* 0x04 */ PointPartInfo* mPointPartInfoArray;
     /* 0x08 */ s32 mPointPartInfoNum;
-    /* 0x0C */ s32 mWorldUnlockedNum;
+    /* 0x0C */ s32 mUnlockedWorldNum;
 };
