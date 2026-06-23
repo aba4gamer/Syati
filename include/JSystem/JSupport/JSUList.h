@@ -8,7 +8,7 @@ class JSUPtrList {
 public:
     inline JSUPtrList() { initiate(); }
 
-    JSUPtrList(bool);
+    JSUPtrList(bool hasBeenInit);
     ~JSUPtrList();
 
     void initiate();
@@ -29,7 +29,7 @@ public:
 
 class JSUPtrLink {
 public:
-    JSUPtrLink(void*);
+    JSUPtrLink(void* pData);
     ~JSUPtrLink();
 
     void* getObjectPtr() const { return mData; }
@@ -63,7 +63,7 @@ class JSUList : public JSUPtrList {
 public:
     JSUList() : JSUPtrList() {}
 
-    JSUList(bool thing) : JSUPtrList(thing) {}
+    JSUList(bool hasBeenInit) : JSUPtrList(hasBeenInit) {}
 
     ~JSUList(){
 
