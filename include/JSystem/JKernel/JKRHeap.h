@@ -56,27 +56,20 @@ public:
     static void copyMemory(void *dest, void *src, u32 len);
     static void* setErrorHandler(void (*)(void *, u32, s32));
 
-    u32 _C;
-    u32 _10;
-    u32 _14;
-    u32 _18;
-    u32 _1C;
-    u32 _20;
-    u32 _24;
-    u32 _28;
-    u32 _2C;
-    u32 _30;
-    u32 _34;
-    u32 _38;
-    u32 _3C;
-    u32 _40;
-    u32 _44;
-    u32 _48;
-    u32 _4C;
-    u32 _50;
-    u32 _54;
-    u32 _58;
-    JSUPtrList mPtrList; // _5C
+    OSMutex mMutex;  // 0x18
+    u8* mStart;      // 0x30
+    u8* mEnd;        // 0x34
+    u32 mSize;       // 0x38
+    u8 _3C;
+    u8 _3D;
+    u8 _3E;
+    u8 _3F;
+    JSUTree< JKRHeap > mChildTree;         // 0x40
+    JSUList< JKRDisposer > mDisposerList;  // 0x5C
+    bool mErrorFlag;                       // 0x68
+    u8 _69;
+    u8 _6A;
+    u8 _6B;
 
     static void* mCodeStart;
     static void* mCodeEnd;
