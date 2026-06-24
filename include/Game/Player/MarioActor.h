@@ -101,6 +101,7 @@ public:
 	void changeMaxLife(s32);
 	void setPunchHitTimer(u8);
 	void tryReleaseBombTeresa();
+	void forceGameOver();
 
 	void initFireMario();
 	void initBeeMario();

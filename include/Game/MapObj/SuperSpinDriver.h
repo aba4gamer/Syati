@@ -52,7 +52,7 @@ public:
 	s32 _1A0;
 	s32 mColor;
 	s32 _1A8;
-	u8 _1AC;
+	bool _1AC;
 	s32 _1B0;
 	u8 _1B4;
 	u8 _1B5;

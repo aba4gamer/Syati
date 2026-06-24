@@ -31,6 +31,7 @@
 #include "Game/MapObj/MapObjActor.h"
 #include "Game/MapObj/MapObjActorInitInfo.h"
 #include "Game/MapObj/MapObjConnector.h"
+#include "Game/MapObj/MiniTicoMaster.h"
 #include "Game/MapObj/MorphItemCollection.h"
 #include "Game/MapObj/MorphItemObjNeo.h"
 #include "Game/MapObj/PetitPorter.h"
