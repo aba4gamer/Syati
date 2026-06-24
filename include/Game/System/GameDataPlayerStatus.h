@@ -27,4 +27,4 @@ public:
     /* 0x0E */ u16 mLast1upCoinNum;
     /* 0x10 */ u8 mFlag;
     /* 0x14 */ u32 _14;
-}
+};
