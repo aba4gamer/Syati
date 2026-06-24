@@ -1,10 +1,10 @@
 #pragma once
 
 #include "revolution.h"
+#include "Game/System/GameDataPlayerStatus.h"
 
 class SaveDataHandleSequence;
 class GameEventValueChecker;
-class GameDataPlayerStatus;
 class GameDataSomeGalaxyStorage;
 class GameDataTicoFatStorage;
 class GameDataWorldMapStorage;

@@ -14,11 +14,11 @@ public:
 	virtual void initializeData();
 
     s32 getPlayerLeft() const;
-    void addPlayerLeft(s32);
+    void addPlayerLeft(int);
     s32 getStockedStarPieceNum() const;
-    void addStockedStarPieceNum(s32);
+    void addStockedStarPieceNum(int);
     s32 getStockedCoinNum() const;
-    void addStockedCoinNum(s32);
+    void addStockedCoinNum(int);
 
     /* 0x04 */ BinaryDataContentHeaderSerializer* mHeaderSerializer;
     /* 0x08 */ u8 mPlayerLeft;
