@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../LiveActor/LiveActor.h"
-#include "../Util/JMapInfo.h"
-#include "../../revolution/types.h"
+#include "Game/LiveActor/LiveActor.h"
+#include "Game/Util/JMapInfo.h"
+#include "revolution/types.h"
 
 class SimpleLayout;
 
