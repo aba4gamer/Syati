@@ -9,7 +9,7 @@ class GalaxyStatusAccessor;
 class JMapInfo;
 class ScenarioData;
 
-typedef MR::FixedArray<ScenarioData*, 64> ScenarioDataType; // I don't know why this is needed but I cannot compile without it...
+typedef MR::FixedArray<ScenarioData*, 96> ScenarioDataType; // I don't know why this is needed but I cannot compile without it...
 
 class ScenarioDataParser : public NameObj {
 public:
@@ -17,11 +17,12 @@ public:
     /// @param pName A pointer to the null-terminated name of the object.
     ScenarioDataParser(const char* pName);
 
+    virtual ~ScenarioDataParser();
+
     const ScenarioData* getScenarioData(const char*) const;
-    // const ScenarioData* getScenarioData(s32) const; // Got removed in SMG2
     GalaxyStatusAccessor makeAccessor(const char*) const;
 
-    MR::Vector<ScenarioDataType> mScenarioData; // Not bound-checked in vanilla
+    /* 0x10 */ MR::Vector<ScenarioDataType> mScenarioData;
 };
 
 class ScenarioDataIter {
