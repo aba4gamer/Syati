@@ -29,14 +29,15 @@ public:
     inline ScenarioDataIter() {} // This MUST exist because there are many occasions where the game will init the variable of an iter and then actually create it later.
     ScenarioDataIter(const ScenarioDataParser*, int);
 
-    // there's a really weird virtual here that seems to detect if the world ID of a galaxy is greater than 0 but I don't know why this would be needed...
+    virtual bool isValidWorldId(int idx) const;
 
     bool isEnd() const;
     void goNext();
+    void goNextValidWorldId(int idx);
     GalaxyStatusAccessor makeAccessor() const;
 
-    /* 0x00 */ const ScenarioDataParser* mParser;
-    /* 0x04 */ int mCur;
+    /* 0x04 */ const ScenarioDataParser* mParser;
+    /* 0x08 */ int mCur;
 };
 
 class ScenarioData {
