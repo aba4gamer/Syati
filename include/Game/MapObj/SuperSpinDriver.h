@@ -17,7 +17,7 @@ public:
 	void onUse();
 
 	s32 _90;
-	s32 _94;
+	SpinDriverShootPath *mShootPath;			// _94
 	s32 _98;
 	SpinDriverPathDrawer* mSpinDriverPathDrawer; // _9C
 	ModelObj *mEmptyModel;						 // _A0

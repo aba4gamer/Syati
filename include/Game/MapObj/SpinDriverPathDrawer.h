@@ -1,9 +1,30 @@
 #pragma once
 
 #include "Game/LiveActor/LiveActor.h"
+#include "Game/Util/JMapInfo.h"
+#include "Game/Util/ParabolicPath.h"
+#include "JSystem/JGeometry/TVec.h"
 #include "JSystem/JUtility/JUTTexture.h"
 
-class SpinDriverShootPath;
+class SpinDriverShootPath {
+public:
+	SpinDriverShootPath();
+	void calcClippingInfo(TVec3f *, f32 *, f32, f32);
+	void calcDirection(TVec3f *, f32, f32) const;
+	void calcInitPose(TVec3f *, TVec3f *, TVec3f *, f32) const;
+	void calcPosition(TVec3f *, f32) const;
+	f32 getTotalLength() const;
+	void init(const JMapInfoIter &);
+	void initUsingParabolic(const JMapInfoIter &, const TVec3f &);
+	void setStartPosition(const TVec3f &);
+
+	RailRider *mRailRider;			// _0
+	ParabolicPath *mParabolicPath;	// _4
+	u32 _8;
+	u32 _C;
+	u32 _10;
+	u8 _14;
+};
 
 class SpinDriverPathDrawInit : public NameObj {
 public:

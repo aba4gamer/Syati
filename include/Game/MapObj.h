@@ -48,6 +48,7 @@
 #include "Game/MapObj/StarPiece.h"
 #include "Game/MapObj/StarPieceMother.h"
 #include "Game/MapObj/SuperSpinDriver.h"
+#include "Game/MapObj/TicoFatStarPiece.h"
 #include "Game/MapObj/WaterPressureBullet.h"
 #include "Game/MapObj/WaterPressureBulletHolder.h"
 #include "Game/MapObj/WorldMap.h"
