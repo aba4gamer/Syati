@@ -191,6 +191,16 @@ namespace JGeometry {
 
         T angle(const TVec3<T> &) const;
 
+        inline TVec3 cross(const TVec3& b) const {
+            TVec3 ret;
+            PSVECCrossProduct((const Vec*)this, (const Vec*)&b, (Vec*) & ret);
+            return ret;
+        }
+
+        inline f32 length() const {
+            return PSVECMag((const Vec*)this);
+        }
+
         /* Checkers */
         bool epsilonEquals(const TVec3<T> &, T) const;
         bool isZero() const;
