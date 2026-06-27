@@ -187,6 +187,11 @@ namespace JGeometry {
     template<class T>
     struct TPosition3 : public TRotation3<T> {
     public:
+        TPosition3() {};
+        TPosition3(MtxPtr rSrc) {
+            JMath::gekko_ps_copy12(this, rSrc);
+        }
+
         void getTrans(TVec3f &rDest) const;
         void setTrans(const TVec3f &rSrc);
         //void setTrans(f32 x, f32 y, f32 z); // Doesn't exist in SMG2
