@@ -3,8 +3,7 @@
 #include "JSystem/J3DGraphBase/J3DModel.h"
 #include "JSystem/J3DGraphBase/J3DModelData.h"
 
-class J3DModelX
-{
+class J3DModelX {
 public:
 	J3DModelX(J3DModelData*, u32, u32);
 

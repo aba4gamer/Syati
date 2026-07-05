@@ -201,7 +201,7 @@ public:
 	s16 _552;
 	s16 _554;
 	f32 _558;
-	Color8 _55C;
+	Color8 mPlayerFlashColor;		// _55C
 	u8 _560;
 	u8 _561;
 	s32 _564;
