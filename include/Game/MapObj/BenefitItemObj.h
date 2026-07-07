@@ -2,7 +2,9 @@
 
 #include "revolution.h"
 #include "Game/LiveActor/LiveActor.h"
-#include "Game/LiveActor/FlashingCtrl.h"
+
+class FlashingCtrl;
+class ActorCameraInfo;
 
 class BenefitItemObj : public LiveActor {
 public:
