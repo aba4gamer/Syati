@@ -201,6 +201,11 @@ namespace JGeometry {
             return PSVECMag((const Vec*)this);
         }
 
+        inline void rejection(const TVec3& rVec, const TVec3& rNormal) {
+            const TVec3& norm = rNormal;
+            JMAVECScaleAdd((const Vec*)&norm, (const Vec*)&rVec, (Vec*)this, -norm.dot(rVec));
+        }
+
         /* Checkers */
         bool epsilonEquals(const TVec3<T> &, T) const;
         bool isZero() const;
